@@ -47,9 +47,7 @@ function removePlaceholders() {
   });
 }
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
+function formAction() {
   const firstName = document.getElementById("first_name");
   const lastName = document.getElementById("last_name");
   const email = document.getElementById("email");
@@ -89,4 +87,9 @@ form.addEventListener("submit", function (e) {
 
     alert("Success! Your free trial has been claimed.");
   }
+}
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  formAction();
 });

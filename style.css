@@ -129,7 +129,32 @@ button {
   margin-bottom: 0.5rem;
 }
 button:hover {
-  background-color: var();
+  background-color: var(--green-400);
+}
+.error-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--red-400);
+  color: white;
+  border-radius: 50%;
+  font-weight: var(--large-fw);
+  font-size: 0.85rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.error {
+  display: none;
+  color: var(--red-400);
+  font-size: 0.75rem;
+  font-style: italic;
+  text-align: right;
+  margin-top: 6px;
 }
 .terms {
   color: var(--purple-350);
@@ -179,6 +204,12 @@ button:hover {
 
   .sign-up {
     padding: 30px 24px;
+  }
+  .error-icon {
+    top: 15px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
   }
 }
 

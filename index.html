@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
     <link
       rel="icon"
       type="image/png"
@@ -33,25 +33,29 @@
       <div class="box2">
         <p class="trial">Try it free 7 days then $20/mo. thereafter</p>
         <div class="sign-up">
-          <form class="form">
+          <form class="form" id="form">
             <div class="input">
               <input
                 class="input1"
                 type="text"
                 name="first-name"
-                id="first-name"
+                id="first_name"
                 placeholder="First Name"
               />
+              <p class="error">First name cannot be empty</p>
+              <span class="error-icon" aria-hidden="true">!</span>
             </div>
 
             <div class="input">
               <input
                 class="input1"
                 type="text"
-                name="last-name"
-                id="last-name"
+                name="last_name"
+                id="last_name"
                 placeholder="Last Name"
               />
+              <span class="error-icon" aria-hidden="true">!</span>
+              <p class="error">Last name cannot be empty</p>
             </div>
 
             <div class="input">
@@ -62,6 +66,8 @@
                 id="email"
                 placeholder="Email Address"
               />
+              <span class="error-icon" aria-hidden="true">!</span>
+              <p class="error">Looks like this is not an email</p>
             </div>
 
             <div class="input">
@@ -72,6 +78,8 @@
                 id="password"
                 placeholder="Password"
               />
+              <span class="error-icon" aria-hidden="true">!</span>
+              <p class="error">Password cannot be empty</p>
             </div>
 
             <button type="submit">Claim your free trial</button>

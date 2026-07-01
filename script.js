@@ -90,8 +90,8 @@ form.addEventListener("submit", function (e) {
     removePlaceholders();
 
     firstName.value = "First Name";
-    email.value = "Last Name";
-    lastName.value = "Email Address";
+    lastName.value = "Last Name";
+    email.value = "Email Address";
     password.value = "Password";
 
     alert("Success! Your free trial has been claimed.");

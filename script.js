@@ -28,7 +28,7 @@ const hideError = (input) => {
   const container = input.parentElement;
   container.querySelector(".error-icon").style.display = "none";
   container.querySelector(".error").style.display = "none";
-  input.style.borderColor = "#hsl(246, 25%, 77%)";
+  input.style.borderColor = "hsl(246, 25%, 77%)";
 };
 
 const isValidEmail = (email) => {
@@ -45,6 +45,13 @@ const removePlaceholders = () => {
     input.offsetHeight;
     input.style.display = "block";
   });
+};
+
+const restorePlaceholders = () => {
+  document.getElementById("first_name").placeholder = "First Name";
+  document.getElementById("last_name").placeholder = "Last Name";
+  document.getElementById("email").placeholder = "Email Address";
+  document.getElementById("password").placeholder = "Password";
 };
 
 const formAction = () => {
@@ -78,12 +85,10 @@ const formAction = () => {
   }
 
   if (isValid) {
-    removePlaceholders();
-
-    firstName.value = "First Name";
-    lastName.value = "Last Name";
-    email.value = "Email Address";
-    password.value = "Password";
+    firstName.value = "";
+    lastName.value = "";
+    email.value = "";
+    password.value = "";
 
     alert("Success! Your free trial has been claimed.");
   }

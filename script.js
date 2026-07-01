@@ -6,6 +6,22 @@ function showError(input, message) {
   container.querySelector(".error").style.display = "block";
   container.querySelector(".error").textContent = message;
   input.style.borderColor = "hsl(0, 100%, 74%)";
+
+  if (input.id === "first_name") {
+    input.placeholder = "";
+  }
+
+  if (input.id === "last_name") {
+    input.placeholder = "";
+  }
+
+  if (input.id === "email") {
+    input.placeholder = "email@example.com";
+    input.classList.add("email-error");
+  }
+  if (input.id === "password") {
+    input.placeholder = "";
+  }
 }
 
 function hideError(input) {
@@ -13,6 +29,10 @@ function hideError(input) {
   container.querySelector(".error-icon").style.display = "none";
   container.querySelector(".error").style.display = "none";
   input.style.borderColor = "#ccc";
+
+  if (input.id === "email") {
+    input.placeholder = "Email Address";
+  }
 }
 
 function isValidEmail(email) {
@@ -74,6 +94,6 @@ form.addEventListener("submit", function (e) {
     lastName.value = "";
     password.value = "";
 
-    alert("Form submitted successfully! 🎉");
+    alert("Success! Your free trial has been claimed.");
   }
 });

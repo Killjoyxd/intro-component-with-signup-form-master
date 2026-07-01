@@ -111,6 +111,10 @@ body {
   font-weight: var(--big-fw);
   color: var(--gray-900);
 }
+.input1:focus {
+  outline: none;
+  border-color: var(--gray-900);
+}
 button {
   width: 100%;
   display: flex;
@@ -142,7 +146,7 @@ button:hover {
   border-radius: 50%;
   font-weight: var(--large-fw);
   font-size: 0.85rem;
-  display: none;
+
   align-items: center;
   justify-content: center;
   display: none;
@@ -155,6 +159,9 @@ button:hover {
   font-style: italic;
   text-align: right;
   margin-top: 6px;
+}
+.email-error::placeholder {
+  color: var(--red-400);
 }
 .terms {
   color: var(--purple-350);

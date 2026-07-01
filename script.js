@@ -28,11 +28,7 @@ function hideError(input) {
   const container = input.parentElement;
   container.querySelector(".error-icon").style.display = "none";
   container.querySelector(".error").style.display = "none";
-  input.style.borderColor = "#ccc";
-
-  if (input.id === "email") {
-    input.placeholder = "Email Address";
-  }
+  input.style.borderColor = "#hsl(246, 25%, 77%)";
 }
 
 function isValidEmail(email) {
@@ -74,9 +70,6 @@ form.addEventListener("submit", function (e) {
   }
 
   if (email.value.trim() === "") {
-    showError(email, "Email cannot be empty");
-    isValid = false;
-  } else if (!isValidEmail(email.value.trim())) {
     showError(email, "Looks like this is not an email");
     isValid = false;
   }

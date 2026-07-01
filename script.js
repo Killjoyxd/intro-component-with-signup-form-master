@@ -1,6 +1,6 @@
 const form = document.getElementById("form");
 
-function showError(input, message) {
+const showError = (input, message) => {
   const container = input.parentElement;
   container.querySelector(".error-icon").style.display = "flex";
   container.querySelector(".error").style.display = "block";
@@ -22,21 +22,21 @@ function showError(input, message) {
   if (input.id === "password") {
     input.placeholder = "";
   }
-}
+};
 
-function hideError(input) {
+const hideError = (input) => {
   const container = input.parentElement;
   container.querySelector(".error-icon").style.display = "none";
   container.querySelector(".error").style.display = "none";
   input.style.borderColor = "#hsl(246, 25%, 77%)";
-}
+};
 
-function isValidEmail(email) {
+const isValidEmail = (email) => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
-}
+};
 
-function removePlaceholders() {
+const removePlaceholders = () => {
   const inputs = document.querySelectorAll(".input1");
   inputs.forEach((input) => {
     input.removeAttribute("placeholder");
@@ -45,9 +45,9 @@ function removePlaceholders() {
     input.offsetHeight;
     input.style.display = "block";
   });
-}
+};
 
-function formAction() {
+const formAction = () => {
   const firstName = document.getElementById("first_name");
   const lastName = document.getElementById("last_name");
   const email = document.getElementById("email");
@@ -87,8 +87,8 @@ function formAction() {
 
     alert("Success! Your free trial has been claimed.");
   }
-}
-form.addEventListener("submit", function (e) {
+};
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   formAction();

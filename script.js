@@ -47,13 +47,6 @@ const removePlaceholders = () => {
   });
 };
 
-const restorePlaceholders = () => {
-  document.getElementById("first_name").placeholder = "First Name";
-  document.getElementById("last_name").placeholder = "Last Name";
-  document.getElementById("email").placeholder = "Email Address";
-  document.getElementById("password").placeholder = "Password";
-};
-
 const formAction = () => {
   const firstName = document.getElementById("first_name");
   const lastName = document.getElementById("last_name");
@@ -90,7 +83,7 @@ const formAction = () => {
     email.value = "";
     password.value = "";
 
-    alert("Success! Your free trial has been claimed.");
+    alert("Your free trial has been claimed.");
   }
 };
 form.addEventListener("submit", (e) => {

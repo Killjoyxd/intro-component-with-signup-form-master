@@ -212,12 +212,6 @@ button:hover {
   .sign-up {
     padding: 30px 24px;
   }
-  .error-icon {
-    top: 15px;
-    right: 20px;
-    width: 24px;
-    height: 24px;
-  }
 }
 
 @media (max-width: 480px) {

@@ -31,22 +31,6 @@ const hideError = (input) => {
   input.style.borderColor = "hsl(246, 25%, 77%)";
 };
 
-const isValidEmail = (email) => {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
-};
-
-const removePlaceholders = () => {
-  const inputs = document.querySelectorAll(".input1");
-  inputs.forEach((input) => {
-    input.removeAttribute("placeholder");
-    input.placeholder = "";
-    input.style.display = "none";
-    input.offsetHeight;
-    input.style.display = "block";
-  });
-};
-
 const formAction = () => {
   const firstName = document.getElementById("first_name");
   const lastName = document.getElementById("last_name");
